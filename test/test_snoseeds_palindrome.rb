@@ -7,7 +7,19 @@ class TestSnoseedsPalindrome < Minitest::Test
     refute_nil ::SnoseedsPalindrome::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_non_palindrome
+    refute "apple".palindrome?
+  end
+
+  def test_literal_palindrome
+    assert "racecar".palindrome?
+  end
+
+  def test_mixed_case_palindrome
+    assert "AREPopera".palindrome?
+  end
+
+  def test_palindrome_with_punctuation
+    assert "Madam, I’m Adam.".palindrome?
   end
 end
