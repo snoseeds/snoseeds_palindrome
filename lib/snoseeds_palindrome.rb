@@ -5,7 +5,7 @@ require_relative "snoseeds_palindrome/version"
 module SnoseedsPalindrome
   # Returns true for a palindrome, false otherwise.
   def palindrome?
-    processed_content == processed_content.reverse
+    processed_content.length > 0 && processed_content == processed_content.reverse
   end
 
   private
